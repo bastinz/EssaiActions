@@ -44,4 +44,5 @@ jobs:
 #      env:
 #        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 #        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+      run: mvn -B verify sonar:sonar
+        #/tmp/sonar-scanner-6.1.0.4477/bin/
