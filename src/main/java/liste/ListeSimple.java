@@ -106,17 +106,6 @@ public class ListeSimple {
         tete = precedent;
     }
 
-    public Noeud getPrecedent(Noeud r) {
-    // la liste n'est pas vide puisqu'on transmet un Node de la liste et le Node existe obligatoirement
-        Noeud precedent = tete;
-        Noeud courant = precedent.getSuivant();
-        while (courant != r) {
-            precedent = courant;
-            courant = courant.getSuivant();
-        }
-        return precedent;
-    }
-
     public void echanger(Noeud r1, Noeud r2) {
         if (r1 == r2)
             return;
@@ -139,6 +128,17 @@ public class ListeSimple {
         Noeud temp = r2.getSuivant();
         r2.setSuivant(r1.getSuivant());
         r1.setSuivant(temp);
+    }
+
+    public Noeud getPrecedent(Noeud r) {
+        // la liste n'est pas vide puisqu'on transmet un Node de la liste et le Node existe obligatoirement
+        Noeud precedent = tete;
+        Noeud courant = precedent.getSuivant();
+        while (courant != r) {
+            precedent = courant;
+            courant = courant.getSuivant();
+        }
+        return precedent;
     }
 
 }
